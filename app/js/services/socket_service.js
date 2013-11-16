@@ -1,5 +1,5 @@
 angular.module("app").factory('socket', function($rootScope) {
-    var socket = io.connect();
+    var socket = io.connect('http://10.156.142.103:8000');
     return {
         on: function(eventName, callback) {
             socket.on(eventName, function() {

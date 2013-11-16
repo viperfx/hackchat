@@ -36,7 +36,9 @@ module.exports = {
     // var appState = {'witlr':[], 'comsci':[]}
     var appState = {'witlr':[], 'comsci':[], 'cardiffuni':[],'test':[]}
     io.sockets.on('connection', function(socket) {
-      io.sockets.emit('rooms', appState);
+      socket.on('connect', function(data) {
+        socket.emit('onConnect', appState);
+      });
       socket.on('joinRoom', function(data) {
         appState[data.room].push({'witlr':socket.id})
         socket.join(data.room)

@@ -5,15 +5,28 @@
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <script src="/socket.io/socket.io.js"></script>
-	<script>
-	  var socket = io.connect('http://10.156.142.103:8000');
-	  socket.on('rooms', function (data) {
-	    console.log(data);
-	  });
-	</script>
   </head>
-  <body>
-    <div id="view" ng-view></div>
+  <body ng-controller="HomeController">
+    <!-- <div id="view" ng-view></div> -->
+    <mobile-frame>
+    <mobile-header>
+        <!-- top-bar-content goes here -->
+    </mobile-header>
+    <mobile-nav>
+        <!-- off-canvas-nav-content goes here -->
+        <div class="link nav topic" data-ng-repeat="(room,data) in rooms">{{room}}</div>
+    </mobile-nav>
+    <mobile-content>
+        <!-- main-content goes here -->
+        <div class=""></div>
+    </mobile-content>
+    <mobile-footer>
+        <!-- bottom-bar-content goes here -->
+        <div class="link footer-chatroom">#General Topic 3</div>
+        <div class="link footer-chatroom">#General Topic 1</div>
+    </mobile-footer>
+</mobile-frame>
+
     <script type="text/javascript" src="/js/app.js"></script>
   </body>
 </html>

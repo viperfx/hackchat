@@ -47,7 +47,7 @@ module.exports = {
       });
       socket.on('msg', function(data) {
         //send back to all clients in room except host
-          socket.broadcast.to(data.room).emit('onMsg', {'room':data.room, 'msg':data.msg});
+          socket.broadcast.to(data.room).emit('onMsg', {'room':data.room, 'username':data.username, 'message':data.msg});
       });
 
       // socket.on('joinParty', function(room) {

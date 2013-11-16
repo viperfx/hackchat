@@ -7,6 +7,7 @@ angular.module("app", ['ek.mobileFrame']).run(function($rootScope) {
   $rootScope.alert = function(thing) {
     alert(thing);
   };
+  $rootScope.currentUser = "Guest";
 }).config(['$mobileFrameProvider', function ($mobileFrameProvider) {
         $mobileFrameProvider
             .setHeaderHeight(50)

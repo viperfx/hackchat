@@ -1,12 +1,11 @@
  <div class="triangle-border">
             <div class="chat_bubble">
-            	<p>
-            	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-            	laoreet dolore magna 
+            	<p ng-repeat="msg in chats[currentRoom]">
+            	{{msg.username}}: {{msg.message}}
             	</p>
             </div>
-            <form action="#">
-                <textarea id="message_input"></textarea>
-                <button id="send_button">Send </button>
+            <form ng-submit="send(currentRoom)">
+                <textarea id="message_input" ng-model="currentMsg"></textarea>
+                <button id="send_button" type="submit">Send </button>
             </form>
         </div>

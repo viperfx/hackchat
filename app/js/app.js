@@ -10,6 +10,6 @@ angular.module("app", ["ngResource", "ngRoute",'ek.mobileFrame']).run(function($
 }).config(['$mobileFrameProvider', function ($mobileFrameProvider) {
         $mobileFrameProvider
             .setHeaderHeight(50)
-            .setFooterHeight(30)
+            .setFooterHeight(40)
             .setNavWidth(200);
     }]);

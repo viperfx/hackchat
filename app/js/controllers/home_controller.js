@@ -2,7 +2,9 @@ angular.module("app").controller('HomeController', function($scope, $location, s
   $scope.rooms = [];
   $scope.chats = {'witlr':[{username:'witler mod',message:'Welcome to HackChat you have joined witlr'}], 'comsci':[], 'cardiffuni':[],'test':[]}
   $scope.joined = [];
-
+  if ($rootScope.currentUser == "Guest") {
+    $location.path("/home");
+  }
   $scope.login =  function(){
   	socket.emit('connect', $scope.user);
     $rootScope.currentUser = $scope.user;
@@ -10,8 +12,10 @@ angular.module("app").controller('HomeController', function($scope, $location, s
 
   };
   $scope.send = function (room) {
-    socket.emit('msg', {'room':room, 'msg':$scope.currentMsg, 'username':$rootScope.currentUser});
-    $scope.chats[room].push({'username':$rootScope.currentUser, 'message':$scope.currentMsg, 'class':'outbound'});
+    if ($scope.currentMsg !== "") {
+        socket.emit('msg', {'room':room, 'msg':$scope.currentMsg, 'username':$rootScope.currentUser});
+        $scope.chats[room].push({'username':$rootScope.currentUser, 'message':$scope.currentMsg, 'class':'outbound'});
+    }
     $scope.currentMsg = "";
   };
   socket.on('onMsg', function(data){

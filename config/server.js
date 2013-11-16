@@ -32,10 +32,17 @@ module.exports = {
   },
   modifyHttpServer: function(server) {
     io = require('socket.io').listen(server);
-    io.set('log level', 2)
-    var appState = {}
+    // io.set('log level', 2)
+    // var appState = {'witlr':[], 'comsci':[]}
+    var appState = {'witlr':[], 'comsci':[], 'cardiffuni':[],'test':[]}
     io.sockets.on('connection', function(socket) {
-      socket.on('createParty', function(data) {
+      io.sockets.emit('rooms', appState);
+      socket.on('joinRoom', function(data) {
+        appState[data.room].push({'witlr':socket.id})
+        socket.join(data.room)
+        socket.emit('onJoinRoom', {'msg':'Welcome to HackChat you have joined '+data.room, 'state':appState, 'room':data.room, 'username':data.username})
+      });
+      socket.on('send', function(data) {
           appState[data.room] = data.state;
           socket.join(data.room);
           socket.emit('onPartyCreated', {'room':data.room, 'state':appState[data.room]});

@@ -1,10 +1,11 @@
 angular.module("app").controller('HomeController', function($scope, $location, socket) {
   $scope.rooms = [];
 
-    socket.emit('connect', 'Daniel');
-  alert("test");
-  socket.on('onConnect', function(data) {
-      console.log(data);
+  $scope.login =  function(username){
+  	socket.emit('connect', username);
+  }
+
+  	socket.on('onConnect', function(data) {
       $scope.rooms = data;
   });
 });

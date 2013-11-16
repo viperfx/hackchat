@@ -7,7 +7,7 @@
     <script src="/socket.io/socket.io.js"></script>
   </head>
   <body ng-controller="HomeController">
-    <!-- <div id="view" ng-view></div> -->
+   
     <mobile-frame>
     <mobile-header>
         <!-- top-bar-content goes here -->
@@ -16,14 +16,8 @@
         <!-- off-canvas-nav-content goes here -->
         <div class="link nav topic" data-ng-repeat="(room,data) in rooms">{{room}}</div>
     </mobile-nav>
-    <mobile-content>
+    <mobile-content ng-view>
         <!-- main-content goes here -->
-        <div class="login-form">
-            <div class="input-group">
-            <input type="text" placeholder="Name" class="form-control">
-            <button class="btn btn-default" type="button">Go!</button>
-          </div>
-        </div>
     </mobile-content>
     <mobile-footer>
         <!-- bottom-bar-content goes here -->

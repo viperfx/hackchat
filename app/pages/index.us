@@ -24,6 +24,13 @@
             <button class="btn btn-default" type="button">Go!</button>
           </div>
         </div>
+        <div class="triangle-border">
+            Chat goes here man.
+            <form action="#">
+                <textarea id="message_input"></textarea>
+                <button id="send_button">Send </button>
+            </form>
+        </div>
     </mobile-content>
     <mobile-footer>
         <!-- bottom-bar-content goes here -->

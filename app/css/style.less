@@ -143,3 +143,41 @@ button {
 	outline: none;
 }
 
+
+/* Speech bubble CSS
+------------------------------------------ */
+.triangle-border {
+	position: relative;
+	padding: 15px;
+	margin: 1em 0 3em;
+	color: #333;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	height: 411px;
+}
+
+.triangle-border:after {
+	content: "";
+	position: absolute;
+	bottom: -13px;
+	right: 47px;
+	border-width: 13px 13px 0;
+	border-style: solid;
+	border-color: #fff transparent;
+	display: block;
+	width: 0;
+}
+
+#message_input{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:90%;
+	resize:none;
+}
+
+#send_button{
+	
+}

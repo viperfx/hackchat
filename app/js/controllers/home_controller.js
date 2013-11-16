@@ -2,7 +2,7 @@ angular.module("app").controller('HomeController', function($scope, $location, s
   $scope.rooms = [];
 
     socket.emit('connect', 'Daniel');
-  alert("test");
+  //alert("test");
   socket.on('onConnect', function(data) {
       console.log(data);
       $scope.rooms = data;

@@ -1,4 +1,4 @@
-angular.module("app", ["ngResource", "ngRoute"]).run(function($rootScope) {
+angular.module("app", ["ngResource", "ngRoute",'ek.mobileFrame']).run(function($rootScope) {
   // adds some basic utilities to the $rootScope for debugging purposes
   $rootScope.log = function(thing) {
     console.log(thing);
@@ -7,4 +7,9 @@ angular.module("app", ["ngResource", "ngRoute"]).run(function($rootScope) {
   $rootScope.alert = function(thing) {
     alert(thing);
   };
-});
+}).config(['$mobileFrameProvider', function ($mobileFrameProvider) {
+        $mobileFrameProvider
+            .setHeaderHeight(50)
+            .setFooterHeight(30)
+            .setNavWidth(200);
+    }]);

@@ -1,0 +1,140 @@
+/*!
+ * Angular Mobile Frame - v0.0.1
+ *
+ * 2013-07-09
+ *
+ * Handy frame-elements for a typical mobile website with off-canvas-navigation.
+ *
+ * https://github.com/herschel666/angular-mobile-frame
+ *
+ * Copyright (c) 2013 Emanuel Kluge;
+ * Licensed WTFPL
+**/
+
+html,body{padding:0;margin:0;overflow:hidden}.mobile-frame{width:100%;position:relative;overflow:hidden;-webkit-transition:-webkit-transform .2s linear;-moz-transition:-moz-transform .2s linear;transition:transform .2s linear}.mobile-content{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}.mobile-nav{position:absolute;top:0;bottom:0;left:0}
+
+body {
+    font-family: sans-serif;
+    color: #444;
+    }
+
+a:link,
+a:visited,
+a:hover {
+    color: #000;
+    text-decoration: none;
+    }
+
+.mobile-header,
+.mobile-footer {
+    background-color: #BBB;
+    }
+
+.mobile-content {
+    background-color: #F1F1F1;
+    }
+
+.mobile-nav {
+    background-color: #DDD;
+    box-shadow: inset -.0625em 0 .625em rgba(0,0,0,.6);
+    }
+
+.search-form {
+    padding: .625em;
+    margin-bottom: .625em;
+    }
+
+.search-form input {
+    width: 100%;
+    padding: .3125em 0;
+    border-color: #666;
+    }
+
+.main-nav {
+    padding-left: 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(0,0,0,.05);
+    }
+
+.main-nav-item {
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    }
+
+.main-nav-item a {
+    display: block;
+    padding: 0 .625em;
+    line-height: 2.8;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+.mobile-nav-toggle {
+    width: 40px;
+    height: 40px;
+    margin: 5px .625em;
+    float: left;
+    border: 1px solid #999;
+    color: #EEE;
+    background: #EEE url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHJlY3QgaGVpZ2h0PSI1IiB3aWR0aD0iMjQiIHk9IjciIHg9IjciIGZpbGw9IiM5OTk5OTkiLz48cmVjdCBoZWlnaHQ9IjUiIHdpZHRoPSIyNCIgeT0iMTciIHg9IjciIGZpbGw9IiM5OTk5OTkiLz48cmVjdCBoZWlnaHQ9IjUiIHdpZHRoPSIyNCIgeT0iMjciIHg9IjciIGZpbGw9IiM5OTk5OTkiLz48L2c+PC9zdmc+) 0 0 no-repeat;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: left;
+    text-indent: 150%;
+    -webkit-appearance: none;
+    appearance: none;
+    }
+
+.mobile-header-inner,
+.mobile-content-inner,
+.mobile-footer-inner {
+    padding: 0 .625em;
+    }
+
+.mobile-header-inner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: left;
+    }
+
+.mobile-header-inner strong {
+    line-height: 40px;
+    font-size: 1.5em;
+    }
+
+.mobile-content h1 {
+    padding: 0 .416667em;
+    }
+
+.mobile-footer small {
+    line-height: 30px;
+    }
+
+.search-results h2 {
+    font-size: 1.25em;
+    }
+
+.github-ribbon {
+    position: absolute;
+    width: 149px;
+    height: 149px;
+    top: 0;
+    right: 0;
+    border: 0;
+    }
+
+@media (max-width: 480px) {
+
+    .github-ribbon {
+        width: 99px;
+        height: 99px;
+        }
+
+    .mobile-header-inner strong {
+        font-size: 1.1em;
+        }
+
+}
+

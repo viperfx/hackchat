@@ -23,6 +23,6 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     // }
   });
 
-  $routeProvider.otherwise({ redirectTo: '/login' });
+  $routeProvider.otherwise({ redirectTo: '/home' });
 
 });

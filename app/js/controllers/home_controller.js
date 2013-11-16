@@ -12,6 +12,7 @@ angular.module("app").controller('HomeController', function($scope, $location, s
   $scope.send = function (room) {
     socket.emit('msg', {'room':room, 'msg':$scope.currentMsg, 'username':$rootScope.currentUser});
     $scope.chats[room].push({'username':$rootScope.currentUser, 'message':$scope.currentMsg, 'class':'outbound'});
+    $scope.currentMsg = "";
   };
   socket.on('onMsg', function(data){
     $scope.chats[data.room].push({'username':data.username, 'message':data.message});

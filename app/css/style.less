@@ -10,6 +10,7 @@ h1,h2,h3,h4,h5 {
 
 .mobile-content {
 	background: #ecf0f1;
+	overflow-y: hidden;
 }
 
 #mobile-nav-toggle{
@@ -179,19 +180,13 @@ button {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	height: 411px;
+	padding-bottom: 0;
 }
 
-.triangle-border:after {
-	content: "";
-	position: absolute;
-	bottom: -13px;
-	right: 47px;
-	border-width: 13px 13px 0;
-	border-style: solid;
-	border-color: #fff transparent;
-	display: block;
-	width: 0;
+.triangle-border .inner-border{
+	height: 367px;
+	max-height: 367px;
+	overflow-y: scroll;
 }
 
 #message_input{
@@ -200,6 +195,7 @@ button {
 	left:0px;
 	width:90%;
 	height: 44px;
+	line-height: 44px;
 	resize:none;
 	border: none;
 	border-top: 1px solid #dbdddd;
@@ -233,14 +229,25 @@ button {
 
 .chat_bubble{
 	width: 100%;
-	min-height: 30px;
+	min-height: 50px;
 }
 
 .chat_bubble p{
 	max-width: 75%;
-	float: left;
-	background-color: #58aef4;
+	min-height: 20px;
 	padding: 9px;
 	border-radius: 15px;
 	border: none;
+	float: left;
+	background-color: #58aef4;
+}
+
+.chat_bubble p.outbound{
+	float: right;
+	background-color: #ecf0f1;
+}
+
+.chat_bubble p{
+	clear: both;
+	display: block;
 }

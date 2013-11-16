@@ -1,7 +1,7 @@
  <div class="triangle-border">
  	<div class="inner-border">
 	   <div class="chat_bubble">
-	   	<p class="inbound" ng-repeat="msg in chats[currentRoom]">
+	   	<p ng-repeat="msg in chats[currentRoom]" class="{{msg.class}}">
 	   	{{msg.username}}: {{msg.message}}
 	   	</p>
 	   </div>
@@ -12,7 +12,7 @@
 	   	</p>
 	   </div>-->
 	   <form ng-submit="send(currentRoom)">
-                <textarea id="message_input" ng-model="currentMsg"></textarea>
+                <input id="message_input" ng-model="currentMsg">
                 <button id="send_button" type="submit">Send </button>
             </form>
    </div>

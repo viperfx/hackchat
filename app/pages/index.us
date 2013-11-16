@@ -29,12 +29,7 @@
 </mobile-frame>
 
     <script type="text/javascript" src="/js/app.js"></script>
-    <script type="text/javascript" >
-			$(document).ready(function () {
-				var winHeight = $(window).height();
-				var boxHeight = winHeight - 156;
-				$('.triangle-border').height(boxHeight);
-			});
-	 </script>
   </body>
 </html>
+
+	 </script>

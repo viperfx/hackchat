@@ -22,8 +22,7 @@
     </mobile-content>
     <mobile-footer>
         <!-- bottom-bar-content goes here -->
-        <div class="link footer-chatroom">#General Topic 3</div>
-        <div class="link footer-chatroom">#General Topic 1</div>
+        <div class="link footer-chatroom" ng-class="{active:'currentRoom == room'}" data-ng-repeat="room in joined">#{{room}}</div>
     </mobile-footer>
 </mobile-frame>
 

@@ -40,7 +40,8 @@ module.exports = {
         socket.emit('onConnect', appState);
       });
       socket.on('joinRoom', function(data) {
-        appState[data.room].push({'witlr':socket.id})
+        username = data.username;
+        appState[data.room].push({username: socket.id})
         socket.join(data.room)
         socket.emit('onJoinRoom', {'msg':'Welcome to HackChat you have joined '+data.room, 'state':appState, 'room':data.room, 'username':data.username})
       });

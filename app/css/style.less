@@ -1,7 +1,10 @@
-h1,h2,h3,h4,h5 {
-  text-align: center;
+body {
+	font-family: 'Lato', sans-serif;
 }
 
+h1,h2,h3,h4,h5 {
+	text-align: center;
+}
 
 .mobile-content {
 	background: #ecf0f1;
@@ -12,7 +15,21 @@ h1,h2,h3,h4,h5 {
 }
 
 .mobile-header, .mobile-footer {
-	background: #3498db;
+	background: #539FD3;
+}
+
+.link.nav.topic {
+	color: #ecf0f1;
+	width: 200px;
+	line-height: 20px;
+	padding: 5px 0;
+	text-align: center;
+	border-bottom: 1px solid #1C3349;
+	border-top: 1px solid #475E74;	
+}
+
+.link.nav.topic:nth-last-child(1){
+	border-bottom: none;
 }
 
 button {
@@ -29,9 +46,13 @@ button {
 	line-height: 40px;
 	color: #333;
 	background-color: #ecf0f1;
-	padding: 10px 19px;
-	font-size: 17px;
-	line-height: 1.471;
+	font-size: 15px;
+	padding:0 10px;
+}
+
+.mobile-nav {
+	box-shadow: none;
+	background: #34495e;
 }
 
 .link.footer-chatroom.active {

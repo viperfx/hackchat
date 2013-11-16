@@ -3,6 +3,14 @@
   <head>
     <title><%= pkg.name %></title>
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <script src="/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io.connect('http://10.156.142.103:8000');
+	  socket.on('rooms', function (data) {
+	    console.log(data);
+	  });
+	</script>
   </head>
   <body>
     <div id="view" ng-view></div>

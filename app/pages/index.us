@@ -14,7 +14,9 @@
     </mobile-header>
     <mobile-nav>
         <!-- off-canvas-nav-content goes here -->
-        <div class="link nav topic" data-ng-repeat="(room,data) in rooms">{{room}}</div>
+        <div class="link nav topic" data-ng-repeat="(room,data) in rooms">
+          <a ng-click="goToRoom(room)">{{room}}</a>
+        </div>
     </mobile-nav>
     <mobile-content ng-view>
     </mobile-content>
@@ -26,5 +28,6 @@
 </mobile-frame>
 
     <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
   </body>
 </html>

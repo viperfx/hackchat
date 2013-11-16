@@ -2,9 +2,9 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
 
-  $routeProvider.when('/login', {
-    templateUrl: 'login.html',
-    controller: 'LoginController'
+  $routeProvider.when('/chat', {
+    templateUrl: 'chat.html',
+    controller: 'HomeController'
   });
 
   $routeProvider.when('/home', {

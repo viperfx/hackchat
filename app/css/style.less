@@ -45,9 +45,25 @@ button {
 	height: 40px;
 	line-height: 40px;
 	color: #333;
-	background-color: #ecf0f1;
+	background-color: #2980b9;
 	font-size: 15px;
 	padding:0 10px;
+	border-right: solid 1px #156191;
+}
+
+.link.footer-chatroom:nth-last-child(1){
+	border-left: solid 1px #156191;
+}
+
+.mobile-nav-toggle {
+	background-color: transparent;
+	background-image: url('../img/people.png');
+	background-size: 100% 100%;
+	border: none;
+	outline: none;
+}
+.mobile-nav-toggle:focus{
+	outline: none;
 }
 
 .mobile-nav {
@@ -58,3 +74,50 @@ button {
 .link.footer-chatroom.active {
 	text-decoration: none;
 }
+
+.input-group {
+	width:90%;
+    max-width: 480px;
+    margin: 40px auto;
+}
+
+.form-control {
+	text-indent: 10px;
+    width: 80%;
+    padding: 0;
+    line-height: 28px;
+    height: 28px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #dbdddd;
+    border-right:0;
+    float: left;
+}
+
+.form-control:focus {
+	outline: none;
+	border-color: #dbdddd;
+}
+
+.btn-default {
+    width: 10%;
+    border: 0;
+    background: #FFF;
+    height: 30px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 40px;
+    border: 1px solid #dbdddd;
+    line-height: 25px;
+    color: #808080;
+}
+
+.btn-default:hover{
+	color: #232323;
+}
+
+.btn-default:focus{
+	outline: none;
+}
+

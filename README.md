@@ -6,7 +6,7 @@ This is the repo for a instant messaging app created at a hackathon at Cardiff U
 - [@DanielKoehler](https://github.com/DanielKoehler)
 - [@silverlight513](https://github.com/silverlight513)
 - [@jjmpsp](https://github.com/jjmpsp)
-- [@KiranPanesa](https://github.com/KiranPanesa)
+- [@KiranPanesar](https://github.com/KiranPanesar)
 
 # Screenshot
 ![Login](http://cl.ly/image/2b0G1C3Y2U3p/Screen%20Shot%202013-11-16%20at%2020.07.57.png)
